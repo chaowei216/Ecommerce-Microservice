@@ -6,11 +6,11 @@ using MediatR;
 
 namespace Catalog.Application.Handlers;
 
-public class GetAllTypesHandler : IRequestHandler<GetAllTypesQuery, IList<TypeResponse>>
+public class GetAllTypesQueryHandler : IRequestHandler<GetAllTypesQuery, IList<TypeResponse>>
 {
     private readonly ITypeRepository _typeRepository;
     
-    public GetAllTypesHandler(ITypeRepository typeRepository)
+    public GetAllTypesQueryHandler(ITypeRepository typeRepository)
     {
         _typeRepository = typeRepository;
     }

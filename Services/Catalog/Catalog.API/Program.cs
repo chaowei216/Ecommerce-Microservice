@@ -1,9 +1,12 @@
+using Catalog.Application.Mappers;
+using Catalog.Core.Repositories;
+using Catalog.Infrastructure.Data;
+using Catalog.Infrastructure.Repositories;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -15,6 +18,18 @@ builder.Services.AddSwaggerGen(c =>
         Version = "v1"
     });
 });
+
+// config mapper
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
+// config MediatR
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+
+// config application Services
+builder.Services.AddScoped<ICatalogContext, CatalogContext>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IBrandRepository, ProductRepository>();
+builder.Services.AddScoped<ITypeRepository, ProductRepository>();
 
 var app = builder.Build();
 

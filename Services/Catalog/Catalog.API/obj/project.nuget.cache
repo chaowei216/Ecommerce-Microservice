@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "PJPiu9RfEwQ=",
+  "dgSpecHash": "pr+3QYL7bHI=",
   "success": true,
   "projectFilePath": "D:\\Dev\\net-micro\\Ecommerce\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Luu Trieu Vi\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
+    "C:\\Users\\Luu Trieu Vi\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",
+    "C:\\Users\\Luu Trieu Vi\\.nuget\\packages\\asp.versioning.mvc\\8.1.0\\asp.versioning.mvc.8.1.0.nupkg.sha512",
     "C:\\Users\\Luu Trieu Vi\\.nuget\\packages\\aspnetcore.healthchecks.mongodb\\9.0.0\\aspnetcore.healthchecks.mongodb.9.0.0.nupkg.sha512",
     "C:\\Users\\Luu Trieu Vi\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\Luu Trieu Vi\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
