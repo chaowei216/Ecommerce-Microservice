@@ -1,10 +1,11 @@
-﻿using Catalog.Application.Features.Product.Commands;
+﻿using BuildingBlocks.CQRS;
+using Catalog.Application.Features.Product.Commands;
 using Catalog.Core.Repositories;
 using MediatR;
 
 namespace Catalog.Application.Features.Product.Handlers;
 
-public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, bool>
+public class DeleteProductCommandHandler : ICommandHandler<DeleteProductCommand, bool>
 {
     private readonly IProductRepository _productRepository;
     

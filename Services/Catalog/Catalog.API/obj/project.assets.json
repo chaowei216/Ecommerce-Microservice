@@ -3258,11 +3258,25 @@
           "lib/net7.0/ZstdSharp.dll": {}
         }
       },
+      "BuildingBlocks/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MediatR": "12.5.0"
+        },
+        "compile": {
+          "bin/placeholder/BuildingBlocks.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuildingBlocks.dll": {}
+        }
+      },
       "Catalog.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper": "14.0.0",
+          "BuildingBlocks": "1.0.0",
           "Catalog.Core": "1.0.0",
           "MediatR": "12.5.0",
           "Microsoft.AspNetCore.Mvc": "2.3.0",
@@ -9396,6 +9410,11 @@
         "zstdsharp.port.0.7.3.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
+    },
+    "BuildingBlocks/1.0.0": {
+      "type": "project",
+      "path": "../../../BuildingBlocks/BuildingBlocks.csproj",
+      "msbuildProject": "../../../BuildingBlocks/BuildingBlocks.csproj"
     },
     "Catalog.Application/1.0.0": {
       "type": "project",

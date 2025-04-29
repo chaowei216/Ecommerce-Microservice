@@ -1,10 +1,11 @@
-﻿using Catalog.Application.Responses;
+﻿using BuildingBlocks.CQRS;
+using Catalog.Application.Responses;
 using Catalog.Core.Entities;
 using MediatR;
 
 namespace Catalog.Application.Features.Product.Commands.CreateProduct;
 
-public class CreateProductCommand : IRequest<ProductResponse>
+public class CreateProductCommand : ICommand<ProductResponse>
 {
     public string Name { get; set; } = null!;
 

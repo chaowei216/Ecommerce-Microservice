@@ -1,11 +1,11 @@
-﻿using Catalog.Application.Mappers;
+﻿using BuildingBlocks.CQRS;
+using Catalog.Application.Mappers;
 using Catalog.Application.Responses;
 using Catalog.Core.Repositories;
-using MediatR;
 
 namespace Catalog.Application.Features.Product.Commands.CreateProduct;
 
-public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, ProductResponse>
+public class CreateProductCommandHandler : ICommandHandler<CreateProductCommand, ProductResponse>
 {
     private readonly IProductRepository _productRepository;
     

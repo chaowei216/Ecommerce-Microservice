@@ -1,11 +1,12 @@
-﻿using Catalog.Application.Features.Product.Commands;
+﻿using BuildingBlocks.CQRS;
+using Catalog.Application.Features.Product.Commands;
 using Catalog.Application.Mappers;
 using Catalog.Core.Repositories;
 using MediatR;
 
 namespace Catalog.Application.Features.Product.Handlers;
 
-public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, bool>
+public class UpdateProductCommandHandler : ICommandHandler<UpdateProductCommand, bool>
 {
     private readonly IProductRepository _productRepository;
     

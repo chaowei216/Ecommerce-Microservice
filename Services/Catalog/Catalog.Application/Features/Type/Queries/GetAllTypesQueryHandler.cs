@@ -1,11 +1,12 @@
-﻿using Catalog.Application.Mappers;
+﻿using BuildingBlocks.CQRS;
+using Catalog.Application.Mappers;
 using Catalog.Application.Responses;
 using Catalog.Core.Repositories;
 using MediatR;
 
 namespace Catalog.Application.Features.Type.Queries.GetAllTypes;
 
-public class GetAllTypesQueryHandler : IRequestHandler<GetAllTypesQuery, IList<TypeResponse>>
+public class GetAllTypesQueryHandler : IQueryHandler<GetAllTypesQuery, IList<TypeResponse>>
 {
     private readonly ITypeRepository _typeRepository;
     

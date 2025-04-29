@@ -1,11 +1,12 @@
-﻿using Catalog.Application.Mappers;
+﻿using BuildingBlocks.CQRS;
+using Catalog.Application.Mappers;
 using Catalog.Application.Responses;
 using Catalog.Core.Repositories;
 using MediatR;
 
 namespace Catalog.Application.Features.Brand.Queries.GetAllBrands;
 
-public class GetAllBrandsQueryHandler : IRequestHandler<GetAllBrandsQuery, IList<BrandResponse>>
+public class GetAllBrandsQueryHandler : IQueryHandler<GetAllBrandsQuery, IList<BrandResponse>>
 {
     private readonly IBrandRepository _brandRepository;
 

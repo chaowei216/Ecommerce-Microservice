@@ -1,12 +1,12 @@
-﻿using Catalog.Application.Features.Product.Queries;
+﻿using BuildingBlocks.CQRS;
+using Catalog.Application.Features.Product.Queries;
 using Catalog.Application.Mappers;
 using Catalog.Application.Responses;
 using Catalog.Core.Repositories;
-using MediatR;
 
 namespace Catalog.Application.Features.Product.Handlers;
 
-public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, ProductResponse>
+public class GetProductByIdQueryHandler : IQueryHandler<GetProductByIdQuery, ProductResponse>
 {
     private readonly IProductRepository _productRepository;
     

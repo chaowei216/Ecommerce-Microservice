@@ -1,11 +1,11 @@
-﻿using Catalog.Core.Entities;
-using MediatR;
+﻿using BuildingBlocks.CQRS;
+using Catalog.Core.Entities;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace Catalog.Application.Features.Product.Commands;
 
-public class UpdateProductCommand : IRequest<bool>
+public class UpdateProductCommand : ICommand<bool>
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]

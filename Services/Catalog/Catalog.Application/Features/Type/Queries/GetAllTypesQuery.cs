@@ -1,9 +1,10 @@
-﻿using Catalog.Application.Responses;
+﻿using BuildingBlocks.CQRS;
+using Catalog.Application.Responses;
 using MediatR;
 
 namespace Catalog.Application.Features.Type.Queries.GetAllTypes;
 
-public class GetAllTypesQuery : IRequest<IList<TypeResponse>>
+public class GetAllTypesQuery : IQuery<IList<TypeResponse>>
 {
     
 }
