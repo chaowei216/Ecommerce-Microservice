@@ -1,47 +1,32 @@
-using Catalog.Application.Mappers;
-using Catalog.Core.Repositories;
-using Catalog.Infrastructure.Data;
-using Catalog.Infrastructure.Repositories;
-using Microsoft.OpenApi.Models;
+using Catalog.API.Configurations;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
+
+Log.Information($"Start {builder.Environment.ApplicationName} up");
+try
 {
-    c.SwaggerDoc("v1", new OpenApiInfo()
-    {
-        Title = "Catalog API",
-        Version = "v1"
-    });
-});
+    builder.Host.RegisterAppConfigurations();
+    
+    // Add services or configurations some service app to the container.
+    builder.Services.AddInfrastructure(builder.Configuration);
 
-// config mapper
-builder.Services.AddAutoMapper(typeof(Program).Assembly);
-
-// config MediatR
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
-
-// config application Services
-builder.Services.AddScoped<ICatalogContext, CatalogContext>();
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<IBrandRepository, ProductRepository>();
-builder.Services.AddScoped<ITypeRepository, ProductRepository>();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    var app = builder.Build();
+    
+    app.UseInfrastructure(builder.Environment);
+    
+    app.Run();
 }
+catch (Exception ex)
+{
+    string type = ex.GetType().Name;
+    if (type.Equals("StopTheHostException", StringComparison.Ordinal)) throw;
 
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
+    Log.Fatal(ex, $"Unhandled exception: {ex.Message}");
+}
+finally
+{
+    Log.Information($"Shut down {builder.Environment.ApplicationName} complete");
+    Log.CloseAndFlush();
+}

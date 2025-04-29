@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Catalog.API</name>
+    </assembly>
+    <members>
+        <member name="M:Catalog.API.Configurations.ServiceExtensions.AddInfrastructure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+             <summary>
+            
+             </summary>
+             <param name="services"></param>
+             <param name="configuration"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Catalog.API.Configurations.SwaggerConfig.UseApplicationSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Catalog.API.Controllers.CatalogController.GetAllProducts">
+            <summary>
+            Endpoint for getting all products
+            </summary>
+            <returns>list of products</returns>
+        </member>
+        <member name="M:Catalog.API.Controllers.CatalogController.GetProductById(System.String)">
+            <summary>
+            Endpoint for getting product by id
+            </summary>
+            <param name="id">the id of product</param>
+            <returns>product information</returns>
+        </member>
+        <member name="M:Catalog.API.Controllers.CatalogController.GetAllBrands">
+            <summary>
+            Endpoint for getting all brands
+            </summary>
+            <returns>list of brands</returns>
+        </member>
+        <member name="M:Catalog.API.Controllers.CatalogController.GetAllTypes">
+            <summary>
+            Endpoint for getting all types
+            </summary>
+            <returns>list of types</returns>
+        </member>
+        <member name="M:Catalog.API.Controllers.CatalogController.CreateProduct(Catalog.Application.Features.Product.Commands.CreateProduct.CreateProductCommand)">
+            <summary>
+            Endpoint for creating a product
+            </summary>
+            <param name="request">new product information request</param>
+            <returns>new product</returns>
+        </member>
+        <member name="M:Catalog.API.Controllers.CatalogController.UpdateProduct(System.String,Catalog.Application.Features.Product.Commands.UpdateProductCommand)">
+            <summary>
+            Endpoint for putting a product
+            </summary>
+            <param name="id">the id of product</param>
+            <param name="request">updated product information request</param>
+            <returns>updated result</returns>
+        </member>
+        <member name="M:Catalog.API.Controllers.CatalogController.UpdateProduct(System.String)">
+            <summary>
+            Endpoint for deleting a product
+            </summary>
+            <param name="id">the id of product</param>
+            <returns>deleted result</returns>
+        </member>
+    </members>
+</doc>

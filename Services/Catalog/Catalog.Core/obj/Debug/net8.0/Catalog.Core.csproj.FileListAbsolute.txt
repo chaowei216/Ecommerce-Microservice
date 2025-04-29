@@ -9,3 +9,5 @@ D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net8.0\Catalo
 D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net8.0\refint\Catalog.Core.dll
 D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net8.0\Catalog.Core.pdb
 D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net8.0\ref\Catalog.Core.dll
+D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net8.0\Catalog.Core.csproj.AssemblyReference.cache
+D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Core\obj\Debug\net8.0\Catalog.Core.sourcelink.json

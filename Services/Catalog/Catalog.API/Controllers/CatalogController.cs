@@ -1,5 +1,9 @@
-﻿using Catalog.Application.Commands;
-using Catalog.Application.Queries;
+﻿using Catalog.Application.Features.Brand.Queries.GetAllBrands;
+using Catalog.Application.Features.Product.Commands;
+using Catalog.Application.Features.Product.Commands.CreateProduct;
+using Catalog.Application.Features.Product.Queries;
+using Catalog.Application.Features.Product.Queries.GetAllProducts;
+using Catalog.Application.Features.Type.Queries.GetAllTypes;
 using Catalog.Application.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -19,7 +23,7 @@ public class CatalogController : ApiController
     /// Endpoint for getting all products
     /// </summary>
     /// <returns>list of products</returns>
-    [HttpGet(Name = "GetAllProducts")]
+    [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IList<ProductResponse>))]
     public async Task<ActionResult<IList<ProductResponse>>> GetAllProducts()
     {
@@ -32,7 +36,7 @@ public class CatalogController : ApiController
     /// </summary>
     /// <param name="id">the id of product</param>
     /// <returns>product information</returns>
-    [HttpGet("{id}", Name = "GetProductById")]
+    [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ProductResponse))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<ProductResponse>> GetProductById(string id)
@@ -42,24 +46,10 @@ public class CatalogController : ApiController
     }
 
     /// <summary>
-    /// Endpoint for getting product by name
-    /// </summary>
-    /// <param name="name">name of product</param>
-    /// <returns>list of products</returns>
-    [HttpGet("{name}", Name = "GetProductsByName")]
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IList<ProductResponse>))]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<IList<ProductResponse>>> GetProductsByName(string name)
-    {
-        var products = await _mediator.Send(new GetProductByNameQuery() { Name = name });
-        return Ok(products);
-    }
-
-    /// <summary>
     /// Endpoint for getting all brands
     /// </summary>
     /// <returns>list of brands</returns>
-    [HttpGet("brands", Name = "GetAllBrands")]
+    [HttpGet("brands")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IList<BrandResponse>))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IList<BrandResponse>>> GetAllBrands()
@@ -72,7 +62,7 @@ public class CatalogController : ApiController
     /// Endpoint for getting all types
     /// </summary>
     /// <returns>list of types</returns>
-    [HttpGet("types", Name = "GetAllTypes")]
+    [HttpGet("types")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IList<TypeResponse>))]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IList<TypeResponse>>> GetAllTypes()
@@ -82,24 +72,11 @@ public class CatalogController : ApiController
     }
     
     /// <summary>
-    /// Endpoint for getting all types
-    /// </summary>
-    /// <returns>list of types</returns>
-    [HttpGet("brands/{brand}", Name = "GetAllTypes")]
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IList<ProductResponse>))]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<IList<ProductResponse>>> GetProductsByBrandName(string brand)
-    {
-        var brands = await _mediator.Send(new GetProductByBrandQuery() { BrandName = brand });
-        return Ok(brands);
-    }
-    
-    /// <summary>
     /// Endpoint for creating a product
     /// </summary>
     /// <param name="request">new product information request</param>
     /// <returns>new product</returns>
-    [HttpPost(Name = "CreateProduct")]
+    [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(ProductResponse))]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<ProductResponse>> CreateProduct([FromBody] CreateProductCommand request)
@@ -111,12 +88,13 @@ public class CatalogController : ApiController
     /// <summary>
     /// Endpoint for putting a product
     /// </summary>
+    /// <param name="id">the id of product</param>
     /// <param name="request">updated product information request</param>
     /// <returns>updated result</returns>
-    [HttpPut(Name = "UpdateProduct")]
+    [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(bool))]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<bool>> UpdateProduct([FromBody] UpdateProductCommand request)
+    public async Task<ActionResult<bool>> UpdateProduct(string id, [FromBody] UpdateProductCommand request)
     {
         var result = await _mediator.Send(request);
         return Ok(result);
@@ -127,7 +105,7 @@ public class CatalogController : ApiController
     /// </summary>
     /// <param name="id">the id of product</param>
     /// <returns>deleted result</returns>
-    [HttpDelete("{id}", Name = "DeleteProduct")]
+    [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(bool))]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<bool>> UpdateProduct(string id)

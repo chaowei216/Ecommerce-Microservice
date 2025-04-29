@@ -13,3 +13,4 @@ D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Application\obj\Debug\net8.0
 D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Application\obj\Debug\net8.0\refint\Catalog.Application.dll
 D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Application\obj\Debug\net8.0\Catalog.Application.pdb
 D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Application\obj\Debug\net8.0\ref\Catalog.Application.dll
+D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Application\obj\Debug\net8.0\Catalog.Application.sourcelink.json
