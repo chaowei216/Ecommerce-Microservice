@@ -1,0 +1,13 @@
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\bin\Debug\net8.0\BuildingBlocks.deps.json
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\bin\Debug\net8.0\BuildingBlocks.dll
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\bin\Debug\net8.0\BuildingBlocks.pdb
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\obj\Debug\net8.0\BuildingBlocks.csproj.AssemblyReference.cache
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\obj\Debug\net8.0\BuildingBlocks.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\obj\Debug\net8.0\BuildingBlocks.AssemblyInfoInputs.cache
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\obj\Debug\net8.0\BuildingBlocks.AssemblyInfo.cs
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\obj\Debug\net8.0\BuildingBlocks.csproj.CoreCompileInputs.cache
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\obj\Debug\net8.0\BuildingBlocks.sourcelink.json
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\obj\Debug\net8.0\BuildingBlocks.dll
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\obj\Debug\net8.0\refint\BuildingBlocks.dll
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\obj\Debug\net8.0\BuildingBlocks.pdb
+D:\Dev\net-micro\Ecommerce\BuildingBlocks\obj\Debug\net8.0\ref\BuildingBlocks.dll

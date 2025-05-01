@@ -1,10 +1,10 @@
-﻿using Catalog.Application.Features.Brand.Queries.GetAllBrands;
+﻿using Catalog.Application.DTOs;
+using Catalog.Application.Features.Brand.Queries.GetAllBrands;
 using Catalog.Application.Features.Product.Commands;
 using Catalog.Application.Features.Product.Commands.CreateProduct;
-using Catalog.Application.Features.Product.Queries;
 using Catalog.Application.Features.Product.Queries.GetAllProducts;
+using Catalog.Application.Features.Product.Queries.GetProductById;
 using Catalog.Application.Features.Type.Queries.GetAllTypes;
-using Catalog.Application.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

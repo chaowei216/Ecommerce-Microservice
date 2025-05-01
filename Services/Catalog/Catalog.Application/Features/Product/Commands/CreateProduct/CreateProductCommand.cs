@@ -1,7 +1,6 @@
 ﻿using BuildingBlocks.CQRS;
-using Catalog.Application.Responses;
+using Catalog.Application.DTOs;
 using Catalog.Core.Entities;
-using MediatR;
 
 namespace Catalog.Application.Features.Product.Commands.CreateProduct;
 

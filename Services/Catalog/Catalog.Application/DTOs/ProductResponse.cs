@@ -2,7 +2,7 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Catalog.Application.Responses;
+namespace Catalog.Application.DTOs;
 
 public class ProductResponse
 {

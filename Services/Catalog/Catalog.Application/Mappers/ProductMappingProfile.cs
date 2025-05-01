@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using Catalog.Application.DTOs;
 using Catalog.Application.Features.Product.Commands;
 using Catalog.Application.Features.Product.Commands.CreateProduct;
-using Catalog.Application.Responses;
 using Catalog.Core.Entities;
 
 namespace Catalog.Application.Mappers;

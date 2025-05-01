@@ -9,6 +9,7 @@
       "Catalog.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
+          "BuildingBlocks": "1.0.0",
           "Catalog.Core": "1.0.0",
           "MediatR": "12.5.0",
           "Microsoft.AspNetCore.Mvc": "2.3.0",
@@ -1485,6 +1486,17 @@
           }
         }
       },
+      "BuildingBlocks/1.0.0": {
+        "dependencies": {
+          "MediatR": "12.5.0"
+        },
+        "runtime": {
+          "BuildingBlocks.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Catalog.Core/1.0.0": {
         "dependencies": {
           "AspNetCore.HealthChecks.MongoDb": "9.0.0",
@@ -2694,6 +2706,11 @@
       "sha512": "sha512-U9Ix4l4cl58Kzz1rJzj5hoVTjmbx1qGMwzAcbv1j/d3NzrFaESIurQyg+ow4mivCgkE3S413y+U9k4WdnEIkRA==",
       "path": "zstdsharp.port/0.7.3",
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
+    },
+    "BuildingBlocks/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Catalog.Core/1.0.0": {
       "type": "project",

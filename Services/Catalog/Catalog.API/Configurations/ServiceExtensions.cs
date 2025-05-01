@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 using Catalog.Application;
 using Catalog.Application.Features.Product.Queries.GetAllProducts;
-using Catalog.Application.Responses;
 using Catalog.Infrastructure;
 using Google.Apis.Json;
 using Newtonsoft.Json;
@@ -31,8 +30,9 @@ public static class ServiceExtensions
             {
                 AllowIntegerValues = true
             });
-            o.SerializerSettings.StringEscapeHandling = Newtonsoft.Json.StringEscapeHandling.EscapeNonAscii;
+            o.SerializerSettings.StringEscapeHandling = StringEscapeHandling.EscapeNonAscii;
         });
+        
         var assemlies = new Assembly[] { typeof(GetAllProductsQuery).Assembly };
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assemlies));
         services.Configure<RouteOptions>(options => options.LowercaseUrls = true);

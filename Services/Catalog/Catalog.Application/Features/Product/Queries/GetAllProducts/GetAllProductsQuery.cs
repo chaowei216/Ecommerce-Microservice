@@ -1,5 +1,5 @@
 ﻿using BuildingBlocks.CQRS;
-using Catalog.Application.Responses;
+using Catalog.Application.DTOs;
 
 namespace Catalog.Application.Features.Product.Queries.GetAllProducts;
 

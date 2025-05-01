@@ -1,7 +1,7 @@
 ﻿using BuildingBlocks.CQRS;
+using Catalog.Application.DTOs;
 using Catalog.Application.Features.Product.Queries.GetAllProducts;
 using Catalog.Application.Mappers;
-using Catalog.Application.Responses;
 using Catalog.Core.Repositories;
 
 namespace Catalog.Application.Features.Product.Handlers;

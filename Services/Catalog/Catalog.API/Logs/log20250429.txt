@@ -838,3 +838,22 @@ File name: 'D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.API\bin\Debug\ne
 2025-04-29 16:46:21.771 +07:00 [INF] Executed action Catalog.API.Controllers.CatalogController.GetAllBrands (Catalog.API) in 58.3605ms
 2025-04-29 16:46:21.773 +07:00 [INF] Executed endpoint 'Catalog.API.Controllers.CatalogController.GetAllBrands (Catalog.API)'
 2025-04-29 16:46:21.776 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:8000/api/v1/catalog/brands - 200 346 application/json; charset=utf-8 76.5728ms
+2025-04-29 16:56:31.574 +07:00 [WRN] The WebRootPath was not found: D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.API\wwwroot. Static files may be unavailable.
+2025-04-29 16:56:31.635 +07:00 [INF] Now listening on: http://localhost:8000
+2025-04-29 16:56:31.637 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 16:56:31.639 +07:00 [INF] Hosting environment: Development
+2025-04-29 16:56:31.639 +07:00 [INF] Content root path: D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.API
+2025-04-29 16:56:32.027 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:8000/swagger/index.html - null null
+2025-04-29 16:56:32.173 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:8000/swagger/index.html - 200 null text/html;charset=utf-8 147.4244ms
+2025-04-29 16:56:32.335 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:8000/v1/api-docs - null null
+2025-04-29 16:56:32.503 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:8000/v1/api-docs - 200 null application/json;charset=utf-8 168.7751ms
+2025-04-29 16:56:58.511 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:8000/api/v1/catalog - null null
+2025-04-29 16:56:58.538 +07:00 [INF] Executing endpoint 'Catalog.API.Controllers.CatalogController.GetAllProducts (Catalog.API)'
+2025-04-29 16:56:58.560 +07:00 [INF] Route matched with {action = "GetAllProducts", controller = "Catalog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IList`1[Catalog.Application.Responses.ProductResponse]]] GetAllProducts() on controller Catalog.API.Controllers.CatalogController (Catalog.API).
+2025-04-29 16:56:58.574 +07:00 [INF] Executing action method Catalog.API.Controllers.CatalogController.GetAllProducts (Catalog.API) - Validation state: "Valid"
+2025-04-29 16:56:59.183 +07:00 [INF] Executed action method Catalog.API.Controllers.CatalogController.GetAllProducts (Catalog.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 601.638ms.
+2025-04-29 16:56:59.193 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Catalog.Application.Responses.ProductResponse, Catalog.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-29 16:56:59.249 +07:00 [INF] Executed action Catalog.API.Controllers.CatalogController.GetAllProducts (Catalog.API) in 683.555ms
+2025-04-29 16:56:59.251 +07:00 [INF] Executed endpoint 'Catalog.API.Controllers.CatalogController.GetAllProducts (Catalog.API)'
+2025-04-29 16:56:59.252 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:8000/api/v1/catalog - 200 9824 application/json; charset=utf-8 740.9605ms
+2025-04-29 16:57:04.582 +07:00 [INF] Application is shutting down...

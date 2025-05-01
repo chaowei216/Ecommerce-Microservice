@@ -1,4 +1,4 @@
-﻿namespace Catalog.Application.Responses;
+﻿namespace Catalog.Application.DTOs;
 
 public class TypeResponse
 {

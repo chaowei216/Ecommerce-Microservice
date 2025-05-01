@@ -19,3 +19,5 @@ D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net
 D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net8.0\Data\SeedData\products.json
 D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net8.0\Data\SeedData\types.json
 D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Infrastructure\obj\Debug\net8.0\Catalog.Infrastructure.sourcelink.json
+D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net8.0\BuildingBlocks.dll
+D:\Dev\net-micro\Ecommerce\Services\Catalog\Catalog.Infrastructure\bin\Debug\net8.0\BuildingBlocks.pdb

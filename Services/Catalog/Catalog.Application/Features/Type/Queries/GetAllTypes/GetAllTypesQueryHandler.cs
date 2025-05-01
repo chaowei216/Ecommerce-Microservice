@@ -1,8 +1,7 @@
 ﻿using BuildingBlocks.CQRS;
+using Catalog.Application.DTOs;
 using Catalog.Application.Mappers;
-using Catalog.Application.Responses;
 using Catalog.Core.Repositories;
-using MediatR;
 
 namespace Catalog.Application.Features.Type.Queries.GetAllTypes;
 
